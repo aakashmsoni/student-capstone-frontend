@@ -1,12 +1,12 @@
 export function CapstoneIndex() {
   return (
-    <div>
+    <div id="capstone-index">
       <h1>Capstone Catalog</h1>
-      <div class="card text-bg-dark">
-        <img src="..." class="card-img" alt="..." />
-        <div class="card-img-overlay">
-          <h4 class="card-title">Capstone_title</h4>
-          <p class="card-text">This is where the capstone description will go.</p>
+      <div className="card text-bg-dark">
+        <img src="..." className="card-img" alt="..." />
+        <div className="card-img-overlay">
+          <h4 className="card-title">Capstone_title</h4>
+          <p className="card-text">This is where the capstone description will go.</p>
         </div>
       </div>
     </div>
