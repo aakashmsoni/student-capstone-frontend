@@ -4,8 +4,8 @@ import { CapstoneIndex } from "./CapstoneIndex";
 
 export function Content() {
   return (
-    <div className="container">
-      <CapstoneIndex />
+    <div>
+      <h1>Welcome to React!</h1>
     </div>
   );
 }
