@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { CapstoneIndex } from "./CapstoneIndex";
+import { CapstoneShow } from "./CapstoneShow";
 
 export function Content() {
   const [capstones, setCapstones] = useState([]);
@@ -14,6 +15,7 @@ export function Content() {
   return (
     <div className="container">
       <CapstoneIndex />
+      <CapstoneShow />
     </div>
   );
 }
