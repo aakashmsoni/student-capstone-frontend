@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CapstoneIndex } from "./CapstoneIndex";
 import { CapstoneShow } from "./CapstoneShow";
 
@@ -12,9 +12,11 @@ export function Content() {
       setCapstones(response.data);
     }); // <-- INSERT CAP NAME PARAMS
   };
+
+  useEffect(handleIndexCapstones, []);
   return (
     <div className="container">
-      <CapstoneIndex />
+      <CapstoneIndex capstones={capstones} />
       <CapstoneShow />
     </div>
   );
