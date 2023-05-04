@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { CapstoneIndex } from "./CapstoneIndex";
 import { CapstoneShow } from "./CapstoneShow";
+// import { Modal } from "./Modal";
 
 export function Content() {
   const [capstones, setCapstones] = useState([]);
