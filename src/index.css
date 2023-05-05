@@ -5,7 +5,7 @@ html {
 #root{
   background-image: url("https://media.licdn.com/dms/image/C4D12AQHMPBvE3avWzg/article-inline_image-shrink_1000_1488/0/1616872522462?e=1687392000&v=beta&t=1MTEccn_euidpmSlZOjhhjJGQ12qaeX3F8WhzT4xZFs");
   background-repeat: no-repeat;
-  background-size: 1000px 1000px;
+  background-size: cover;
 
   
 }
