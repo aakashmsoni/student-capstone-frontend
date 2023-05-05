@@ -13,7 +13,7 @@ export function Content() {
     axios.get("https://team-api-backend.onrender.com/users.json").then(response => {
       console.log(response.data);
       setCapstones(response.data);
-    }); // <-- INSERT CAP NAME PARAMS
+    }); //
   };
 
   const handleShowCapstone = capstone => {
