@@ -7,18 +7,18 @@ import { Modal } from "./Modal";
 export function Content() {
   const [capstones, setCapstones] = useState([]);
   const [isCapstoneShowVisible, setIsCapstoneShowVisible] = useState(false);
-  const [currentCapstone, setCurrentCapstone] = useState(["test"]);
+  const [currentCapstone, setCurrentCapstone] = useState({});
 
   const handleIndexCapstones = () => {
-    axios.get("http://localhost:3000/capstone_name.json").then(response => {
-      console.log(response);
+    axios.get("https://team-api-backend.onrender.com/users.json").then(response => {
+      console.log(response.data);
       setCapstones(response.data);
     }); // <-- INSERT CAP NAME PARAMS
   };
 
-  const handleShowCapstone = () => {
+  const handleShowCapstone = capstone => {
     setIsCapstoneShowVisible(true);
-    // setCurrentCapstone(capstone);
+    setCurrentCapstone(capstone);
   };
 
   const handleClose = () => {

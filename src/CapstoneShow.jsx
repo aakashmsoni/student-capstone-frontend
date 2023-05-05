@@ -18,7 +18,7 @@ export function CapstoneShow(props) {
       <div className="card">
         <img
           className="card-img-top"
-          style={{ maxHeight: "300px", width: "auto" }}
+          style={{ maxWidth: "500px" }}
           src="https://placeimg.com/640/480/nature"
           alt="Card image cap"
         ></img>
