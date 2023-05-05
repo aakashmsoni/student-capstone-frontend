@@ -7,7 +7,7 @@ import { Modal } from "./Modal";
 export function Content() {
   const [capstones, setCapstones] = useState([]);
   const [isCapstoneShowVisible, setIsCapstoneShowVisible] = useState(false);
-  const [currentCapstone, setCurrentCapstone] = useState([]);
+  const [currentCapstone, setCurrentCapstone] = useState(["test"]);
 
   const handleIndexCapstones = () => {
     axios.get("http://localhost:3000/capstone_name.json").then(response => {
@@ -16,9 +16,9 @@ export function Content() {
     }); // <-- INSERT CAP NAME PARAMS
   };
 
-  const handleShowCapstone = capstone => {
+  const handleShowCapstone = () => {
     setIsCapstoneShowVisible(true);
-    setCurrentCapstone(capstone);
+    // setCurrentCapstone(capstone);
   };
 
   const handleClose = () => {
@@ -30,8 +30,8 @@ export function Content() {
     <div className="container">
       <CapstoneIndex capstones={capstones} onShowCapstone={handleShowCapstone} />
 
-      <Modal show={isCapstoneShowVisible} onClose={handleClose}>
-        <CapstoneShow capstone={currentCapstone} />
+      <Modal show={isCapstoneShowVisible}>
+        <CapstoneShow capstone={currentCapstone} onClose={handleClose} />
       </Modal>
     </div>
   );
