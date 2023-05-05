@@ -1,10 +1,4 @@
 export function CapstoneShow(props) {
-  const student = {
-    first_name: "testfname",
-    last_name: "testlname",
-    name: "test", //comes from capstones model
-    description: "test description", //comes from capstones model
-  };
   console.log(props.capstone, "PROPS");
   console.log(props.user, "PROPS_USER");
   return (
@@ -33,8 +27,8 @@ export function CapstoneShow(props) {
           <li className="list-group-item">Description:{props.capstone.description}</li>
         </ul>
         <div className="card-body">
-          <button href="#" className="btn btn-primary" onClick={props.onClose}>
-            Close Modal
+          <button href="#" className="btn btn-dark" onClick={props.onClose}>
+            Close
           </button>
         </div>
       </div>

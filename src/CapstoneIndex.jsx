@@ -10,8 +10,13 @@ export function CapstoneIndex(props) {
           {/* <div className="col"> */}
           {props.capstones.map(user => (
             <div key={user.id} className="capstones col mb-3">
-              <div className="card">
+              <div className="card h-100">
                 <h3 className="card-header text-center">{user.capstones[0].name}</h3>
+                <p className="text-center">
+                  <small className="text-body-secondary">
+                    By: {user.first_name} {user.last_name}
+                  </small>
+                </p>
                 <img src={user.capstones[0].screenshot} className="card-img-top mx-auto mt-1" />
                 <button
                   type="button"
