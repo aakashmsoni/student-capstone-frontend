@@ -1,4 +1,4 @@
-// import "./Modal.scoped.scss";
+import "./Modal.scoped.scss";
 
 export function Modal(props) {
   if (props.show) {
