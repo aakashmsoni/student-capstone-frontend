@@ -1,6 +1,7 @@
 import "./CapstoneIndex.scoped.scss";
 
 export function CapstoneIndex(props) {
+  console.log(props);
   return (
     <div id="capstone-index">
       <h1>Capstone Catalog</h1>
