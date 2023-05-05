@@ -1,4 +1,5 @@
 export function CapstoneIndex(props) {
+  console.log(props);
   return (
     <div id="capstone-index">
       <h1>Capstone Catalog</h1>
@@ -15,7 +16,7 @@ export function CapstoneIndex(props) {
               <div className="card-body">
                 <h5 className="card-title">Capstone title</h5>
                 <p className="card-text">Capstone descrip/student name</p>
-                <button className="btn btn-primary" onClick={() => props.onShowCapstone(capstone)}>
+                <button className="btn btn-primary" onClick={() => props.onShowCapstone()}>
                   More Info
                 </button>
               </div>
@@ -43,7 +44,9 @@ export function CapstoneIndex(props) {
               <div className="card-body">
                 <h5 className="card-title">Capstone title</h5>
                 <p className="card-text">Capstone descrip/student name</p>
-                <button className="btn btn-primary">More Info</button>
+                <button onClick={() => props.onShowCapstone("capstone")} className="btn btn-primary">
+                  More Info
+                </button>
               </div>
             </div>
           </div>

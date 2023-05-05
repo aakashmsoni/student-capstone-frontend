@@ -1,4 +1,4 @@
-// import "./Modal.scoped.scss";
+import "./Modal.scoped.scss";
 
 export function Modal(props) {
   if (props.show) {
@@ -6,9 +6,9 @@ export function Modal(props) {
       <div className="modal-background">
         <section className="modal-main">
           {props.children}
-          <button className="close" type="button" onClick={props.onClose}>
+          {/*  <button className="close" type="button" onClick={props.onClose}>
             &#x2715;
-          </button>
+          </button> */}
         </section>
       </div>
     );
