@@ -31,7 +31,7 @@ export function Content() {
       <CapstoneIndex capstones={capstones} onShowCapstone={handleShowCapstone} />
 
       <Modal show={isCapstoneShowVisible}>
-        <CapstoneShow capstone={currentCapstone} onClose={handleClose} />
+        <CapstoneShow capstone={currentCapstone} user={capstones} onClose={handleClose} />
       </Modal>
     </div>
   );

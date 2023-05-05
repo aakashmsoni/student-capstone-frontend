@@ -5,7 +5,8 @@ export function CapstoneShow(props) {
     name: "test", //comes from capstones model
     description: "test description", //comes from capstones model
   };
-
+  console.log(props.capstone, "PROPS");
+  console.log(props.user, "PROPS_USER");
   return (
     <div>
       {/* <div>
@@ -19,15 +20,17 @@ export function CapstoneShow(props) {
         <img
           className="card-img-top"
           style={{ maxWidth: "500px" }}
-          src="https://placeimg.com/640/480/nature"
+          src={props.capstone.screenshot}
           alt="Card image cap"
         ></img>
         <div className="card-body">
-          <h2 className="card-title">Student: {student.first_name + " " + student.last_name}</h2>
+          <h2 className="card-title">
+            Student: {props.user[props.capstone.id - 1].first_name + " " + props.user[props.capstone.id - 1].last_name}
+          </h2>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Capstone: {student.name}</li>
-          <li className="list-group-item">Description:{student.description}</li>
+          <li className="list-group-item">Capstone: {props.capstone.name}</li>
+          <li className="list-group-item">Description:{props.capstone.description}</li>
         </ul>
         <div className="card-body">
           <button href="#" className="btn btn-primary" onClick={props.onClose}>
