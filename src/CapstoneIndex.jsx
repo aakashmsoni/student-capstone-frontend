@@ -15,7 +15,7 @@ export function CapstoneIndex(props) {
                 <img src={user.capstones[0].screenshot} className="card-img-top mx-auto mt-1" />
                 <button
                   type="button"
-                  onClick={() => props.onShowCapstone}
+                  onClick={() => props.onShowCapstone(user.capstones[0])}
                   className="btn btn-secondary mx-auto col-4 mb-1 mt-1"
                 >
                   View More
