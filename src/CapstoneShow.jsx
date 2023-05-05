@@ -19,12 +19,19 @@ export function CapstoneShow(props) {
         ></img>
         <div className="card-body">
           <h2 className="card-title">
-            Student: {props.user[props.capstone.id - 1].first_name + " " + props.user[props.capstone.id - 1].last_name}
+            {/* Student: {props.user[props.capstone.id - 1].first_name + " " + props.user[props.capstone.id - 1].last_name} */}
+            Capstone: {props.capstone.name}
           </h2>
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Capstone: {props.capstone.name}</li>
+          <li className="list-group-item">
+            Student: {props.user[props.capstone.id - 1].first_name + " " + props.user[props.capstone.id - 1].last_name}
+          </li>
           <li className="list-group-item">Description:{props.capstone.description}</li>
+          <li className="list-group-item">
+            Project Link:
+            <a href={props.capstone.url}>{props.capstone.url}</a>
+          </li>
         </ul>
         <div className="card-body">
           <button href="#" className="btn btn-dark" onClick={props.onClose}>
