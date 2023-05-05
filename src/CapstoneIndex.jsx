@@ -10,7 +10,7 @@ export function CapstoneIndex(props) {
           {/* <div className="col"> */}
           {props.capstones.map(user => (
             <div key={user.id} className="capstones col mb-3">
-              <div className="card">
+              <div className="card ">
                 <h3 className="card-header text-center">{user.capstones[0].name}</h3>
                 <img src={user.capstones[0].screenshot} className="card-img-top mx-auto mt-1" />
                 <button
